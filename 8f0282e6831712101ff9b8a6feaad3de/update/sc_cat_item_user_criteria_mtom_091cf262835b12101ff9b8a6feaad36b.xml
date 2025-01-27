@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_mtom">
+    <sc_cat_item_user_criteria_mtom action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Training Register Request">33cab6ee831b12101ff9b8a6feaad3f7</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_mtom</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:11:08</sys_created_on>
+        <sys_id>091cf262835b12101ff9b8a6feaad36b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Training Register Request.Training Requesters</sys_name>
+        <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_mtom_091cf262835b12101ff9b8a6feaad36b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 22:11:08</sys_updated_on>
+        <user_criteria display_value="Training Requesters">102c3662835b12101ff9b8a6feaad3be</user_criteria>
+    </sc_cat_item_user_criteria_mtom>
+</record_update>

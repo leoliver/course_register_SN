@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1593179_traini_0.GlideAjax  Schedule Validation</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>GlideAjax  Schedule Validation</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ScheduleValidation = Class.create();
+ScheduleValidation.prototype = {
+    initialize: function () {},
+
+    validateSchedule: function(course, date) {
+        var grCourse = new GlideRecord('x_1593179_traini_0_schedule');
+        grCourse.addQuery('course.sys_id', course);
+        grCourse.addQuery('date', date);
+        grCourse.setLimit(1);
+        grCourse.query();
+        
+        if (grCourse.next()) {
+            return true;
+        }
+        return false;
+    },
+
+    type: 'ScheduleValidation'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 20:56:20</sys_created_on>
+        <sys_id>3479666a83d712101ff9b8a6feaad3cf</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>GlideAjax  Schedule Validation</sys_name>
+        <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
+        <sys_update_name>sys_script_include_3479666a83d712101ff9b8a6feaad3cf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 21:07:11</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>3479666a83d712101ff9b8a6feaad3cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 20:56:19</sys_created_on>
+        <sys_id>4a5b2aea83d712101ff9b8a6feaad3ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 20:56:19</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</application>
+        <file_path/>
+        <instance_id>a410952d1b85c2147d9d2f8dee4bcbd8</instance_id>
+        <instance_name>dev245395</instance_name>
+        <name>sys_script_include_3479666a83d712101ff9b8a6feaad3cf</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1593179_traini_0.GlideAjax  Schedule Validation&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;GlideAjax  Schedule Validation&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var ScheduleValidation = Class.create();
+ScheduleValidation.prototype = {
+    initialize: function () {},
+
+    validateSchedule: function(course, date) {
+        var grCourse = new GlideRecord('x_1593179_traini_0_schedule');
+        grCourse.addQuery('course.sys_id', course);
+        grCourse.addQuery('date', date);
+        grCourse.setLimit(1);
+        grCourse.query();
+        
+        if (grCourse.next()) {
+            return true;
+        }
+        return false;
+    },
+
+    type: 'ScheduleValidation'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-27 20:56:20&lt;/sys_created_on&gt;&lt;sys_id&gt;3479666a83d712101ff9b8a6feaad3cf&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;GlideAjax  Schedule Validation&lt;/sys_name&gt;&lt;sys_package display_value="Training Register" source="x_1593179_traini_0"&gt;8f0282e6831712101ff9b8a6feaad3de&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Training Register"&gt;8f0282e6831712101ff9b8a6feaad3de&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_3479666a83d712101ff9b8a6feaad3cf&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-27 21:07:11&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;3479666a83d712101ff9b8a6feaad3cf&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-27 20:56:19&lt;/sys_created_on&gt;&lt;sys_id&gt;4a5b2aea83d712101ff9b8a6feaad3ca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-27 20:56:19&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1817682274</payload_hash>
+        <record_name>GlideAjax  Schedule Validation</record_name>
+        <reverted_from/>
+        <source>79528666831712101ff9b8a6feaad3b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 21:07:11</sys_created_on>
+        <sys_id>c9ddeaae83d712101ff9b8a6feaad352</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194a996f9f40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 21:07:11</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>41ddeaae3fd7121022b93dc703640d52</update_guid>
+        <update_guid_history>41ddeaae3fd7121022b93dc703640d52:1817682274,445dee2e74d712105566242552e85a14:502326289,532d6e6e9fd7121075c98a21ed0caddf:1857537993,ea5baaea46d71210241a24d91c24d001:-1943578538</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 21:18:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>1f20cc4a67944abd8dc3d9eaccb51af1</sys_id>
+        <sys_metadata>3479666a83d712101ff9b8a6feaad3cf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideAjax  Schedule Validation</sys_name>
+        <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
+        <sys_scope_delete display_value="">6d4945c3bf3b49ac8bb51f69d63048c1</sys_scope_delete>
+        <sys_update_name>sys_script_include_3479666a83d712101ff9b8a6feaad3cf</sys_update_name>
+        <sys_update_version display_value="sys_script_include_3479666a83d712101ff9b8a6feaad3cf">c9ddeaae83d712101ff9b8a6feaad352</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 21:18:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

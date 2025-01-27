@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c4df4ae6835712101ff9b8a6feaad301" label="Schedule" max_length="40" name="x_1593179_traini_0_schedule" type="collection">
+        <element label="Total Students" max_length="40" name="total_students" type="integer"/>
+        <element label="Instructor" max_length="32" name="instructor" reference="sys_user_grmember" reference_qual="group=65b7d2a2839712101ff9b8a6feaad3a0^EQ" reference_qual_condition="group=65b7d2a2839712101ff9b8a6feaad3a0^EQ" type="reference"/>
+        <element calculation="if(!current.course.nil() &amp;&amp; !current.date.nil()) {&#13;&#10;&#9;current.course.getDisplayValue(&quot;name&quot;).toString() + &quot; - &quot; + current.getValue(&quot;date&quot;).toString();&#13;&#10;}" display="true" label="Title" max_length="250" name="title" type="string" virtual="true"/>
+        <element label="Date" max_length="40" name="date" type="glide_date"/>
+        <element label="Course" max_length="32" name="course" reference="x_1593179_traini_0_course" type="reference"/>
+        <element label="Available" max_length="40" name="available" type="integer"/>
+        <index name="index">
+            <element name="course"/>
+        </index>
+        <index name="index2">
+            <element name="instructor"/>
+        </index>
+    </element>
+</database>

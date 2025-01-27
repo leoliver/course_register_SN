@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Course and Date</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+	var date = g_form.getValue("date").split("/");
+	date = date[2] + "-" + date[1] + "-" + date[0];
+	var course = g_form.getValue("course");
+
+	var ga = new GlideAjax('global.glideAjaxScheduleValidation');
+    ga.addParam('sysparm_name', 'validateSchedule');
+    ga.addParam('sysparm_course', course.toString());
+    ga.addParam('sysparm_date', date.toString());
+
+    var isDuplicate = false;
+
+    ga.getXMLAnswer(function(response) {
+        isDuplicate = response === 'true';
+    });
+
+    if (isDuplicate) {
+        g_form.addErrorMessage('There is already a schedule for this date and course');
+        return false;
+    }
+    return true;
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 21:52:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>28187eea831b12101ff9b8a6feaad39c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Validate Course and Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
+        <sys_update_name>sys_script_client_28187eea831b12101ff9b8a6feaad39c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 21:56:35</sys_updated_on>
+        <table>x_1593179_traini_0_schedule</table>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</application>
+        <file_path/>
+        <instance_id>a410952d1b85c2147d9d2f8dee4bcbd8</instance_id>
+        <instance_name>dev245395</instance_name>
+        <name>sys_script_client_28187eea831b12101ff9b8a6feaad39c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Validate Course and Date&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+	var date = g_form.getValue("date").split("/");
+	date = date[2] + "-" + date[1] + "-" + date[0];
+	var course = g_form.getValue("course");
+
+	var ga = new GlideAjax('global.glideAjaxScheduleValidation');
+    ga.addParam('sysparm_name', 'validateSchedule');
+    ga.addParam('sysparm_course', course.toString());
+    ga.addParam('sysparm_date', date.toString());
+
+    var isDuplicate = false;
+
+    ga.getXMLAnswer(function(response) {
+        isDuplicate = response === 'true';
+    });
+
+    if (isDuplicate) {
+        g_form.addErrorMessage('There is already a schedule for this date and course');
+        return false;
+    }
+    return true;
+	
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-27 21:52:44&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;28187eea831b12101ff9b8a6feaad39c&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate Course and Date&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Training Register" source="x_1593179_traini_0"&gt;8f0282e6831712101ff9b8a6feaad3de&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Training Register"&gt;8f0282e6831712101ff9b8a6feaad3de&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_28187eea831b12101ff9b8a6feaad39c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-27 21:56:35&lt;/sys_updated_on&gt;&lt;table&gt;x_1593179_traini_0_schedule&lt;/table&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1471292629</payload_hash>
+        <record_name>Validate Course and Date</record_name>
+        <reverted_from/>
+        <source>79528666831712101ff9b8a6feaad3b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 21:56:35</sys_created_on>
+        <sys_id>7829b22e831b12101ff9b8a6feaad33a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194a9c434ac0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 21:56:35</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>fc29b22e7a1b121043e4947ad3c59639</update_guid>
+        <update_guid_history>fc29b22e7a1b121043e4947ad3c59639:1471292629,5848722ef31b1210da56ff95875c7209:1663208974</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:01:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>23e8d26ad3a54854b43acdff7a80ce10</sys_id>
+        <sys_metadata>28187eea831b12101ff9b8a6feaad39c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Course and Date</sys_name>
+        <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
+        <sys_parent display_value="Traini 0 Schedule">c4df4ae6835712101ff9b8a6feaad301</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
+        <sys_scope_delete display_value="">6d4945c3bf3b49ac8bb51f69d63048c1</sys_scope_delete>
+        <sys_update_name>sys_script_client_28187eea831b12101ff9b8a6feaad39c</sys_update_name>
+        <sys_update_version display_value="sys_script_client_28187eea831b12101ff9b8a6feaad39c">7829b22e831b12101ff9b8a6feaad33a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 22:01:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

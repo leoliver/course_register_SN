@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing>Local</local_or_existing>
+        <name>GlideAjax  Schedule Validation</name>
+        <operation display_value="execute">execute</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 20:56:21</sys_created_on>
+        <sys_id>d65b6aea83d712101ff9b8a6feaad3e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideAjax  Schedule Validation</sys_name>
+        <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
+        <sys_update_name>sys_security_acl_d65b6aea83d712101ff9b8a6feaad3e9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 20:56:21</sys_updated_on>
+        <type display_value="client_callable_script_include">client_callable_script_include</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</application>
+        <file_path/>
+        <instance_id>a410952d1b85c2147d9d2f8dee4bcbd8</instance_id>
+        <instance_name>dev245395</instance_name>
+        <name>sys_security_acl_d65b6aea83d712101ff9b8a6feaad3e9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><decision_type>allow</decision_type><description/><local_or_existing>Local</local_or_existing><name>GlideAjax  Schedule Validation</name><operation display_value="execute">execute</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-27 20:56:21</sys_created_on><sys_id>d65b6aea83d712101ff9b8a6feaad3e9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>GlideAjax  Schedule Validation</sys_name><sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package><sys_policy/><sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope><sys_update_name>sys_security_acl_d65b6aea83d712101ff9b8a6feaad3e9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-27 20:56:21</sys_updated_on><type display_value="client_callable_script_include">client_callable_script_include</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>467755251</payload_hash>
+        <record_name>GlideAjax  Schedule Validation</record_name>
+        <reverted_from/>
+        <source>79528666831712101ff9b8a6feaad3b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 20:56:21</sys_created_on>
+        <sys_id>665b6aea83d712101ff9b8a6feaad3ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194a98d100f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 20:56:21</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>5a5b6aeac9d712109fcb5912f79c24ee</update_guid>
+        <update_guid_history>5a5b6aeac9d712109fcb5912f79c24ee:467755251</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 21:40:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>704d47d27ab04cb685977cf5548af384</sys_id>
+        <sys_metadata>d65b6aea83d712101ff9b8a6feaad3e9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideAjax  Schedule Validation</sys_name>
+        <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
+        <sys_scope_delete display_value="">6d4945c3bf3b49ac8bb51f69d63048c1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_d65b6aea83d712101ff9b8a6feaad3e9</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_d65b6aea83d712101ff9b8a6feaad3e9">665b6aea83d712101ff9b8a6feaad3ef</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 21:40:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
