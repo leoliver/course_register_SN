@@ -8,21 +8,24 @@
         <description/>
         <mobile_callable>false</mobile_callable>
         <name>TrainingUtils</name>
-        <sandbox_callable>false</sandbox_callable>
+        <sandbox_callable>true</sandbox_callable>
         <script><![CDATA[var TrainingUtils = Class.create();
-TrainingUtils.prototype = {
+TrainingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     initialize: function() {
     },
-	validateSchedule: function(course, date) {
+	validateSchedule: function() {
+		var course = this.getParameter("sysparm_course");
+        var date = this.getParameter("sysparm_date");
+
 		var gr = new GlideRecord('x_1593179_traini_0_schedule');
-		gr.addEncodedQuery("course.sys_id=" + course + "^dateON" + date);
+		gr.addEncodedQuery("course" + course + "^dateON" + date);
         gr.setLimit(1);
         gr.query();
         
         if (gr.next()) {
-            return true;
+            return 'true';
         }
-        return false;
+        return 'false';
 	},
 
 	refQualSchedule: function() {
@@ -48,17 +51,34 @@ TrainingUtils.prototype = {
 			}
 		}
 
+		var schedulesFull = [];
+		var grScheduleCount = new GlideAggregate("x_1593179_traini_0_register");
+		grScheduleCount.addAggregate("COUNT");
+		grScheduleCount.groupBy("schedule");
+		grScheduleCount.addEncodedQuery("stateIN2,3");
+		grScheduleCount.query();
+		while (grScheduleCount.next()) {
+			var scheduleId = grScheduleCount.getValue("schedule");
+			var countSchedule = parseInt(grScheduleCount.getAggregate("COUNT"), 10);
+
+			var grSchedule = new GlideRecord("x_1593179_traini_0_schedule");
+			if (grSchedule.get(scheduleId) && countSchedule >= grSchedule.total_students) {
+				schedulesFull.push(scheduleId);
+			}
+		}
+
 		var schedulesToShow = [];
-		var grSchedule = new GlideRecord("x_1593179_traini_0_schedule");
-		grSchedule.addEncodedQuery("date>" + gs.endOfToday() + "^instructor.user!=" + gs.getUserID());
-		grSchedule.query();
-		while(grSchedule.next()){
-			var courseId = grSchedule.course.toString();
+		var grSchedules = new GlideRecord("x_1593179_traini_0_schedule");
+		grSchedules.addEncodedQuery("date>" + gs.endOfToday() + "^instructor.user!=" + gs.getUserID());
+		grSchedules.query();
+		while(grSchedules.next()){
+			var courseId = grSchedules.course.toString();
 			if(
-				schedulesNotToShow.indexOf(grSchedule.getUniqueValue()) == -1 &&
-				coursesWithLimitExceeded.indexOf(courseId) == -1
+				schedulesNotToShow.indexOf(grSchedules.getUniqueValue()) == -1 &&
+				coursesWithLimitExceeded.indexOf(courseId) == -1 &&
+				schedulesFull.indexOf(grSchedules.getUniqueValue()) == -1
 			){
-				schedulesToShow.push(grSchedule.getUniqueValue());
+				schedulesToShow.push(grSchedules.getUniqueValue());
 			}
 		}
 
@@ -67,19 +87,19 @@ TrainingUtils.prototype = {
 	},
 
     type: 'TrainingUtils'
-};]]></script>
+});]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 11:50:17</sys_created_on>
         <sys_id>a40775b2831312101ff9b8a6feaad314</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>TrainingUtils</sys_name>
         <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
         <sys_update_name>sys_script_include_a40775b2831312101ff9b8a6feaad314</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 21:00:22</sys_updated_on>
+        <sys_updated_on>2025-01-29 22:08:39</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>a40775b2831312101ff9b8a6feaad314</id>
