@@ -4,30 +4,13 @@
         <active>true</active>
         <api_name>x_1593179_traini_0.TrainingUtils</api_name>
         <caller_access/>
-        <client_callable>true</client_callable>
+        <client_callable>false</client_callable>
         <description/>
         <mobile_callable>false</mobile_callable>
         <name>TrainingUtils</name>
-        <sandbox_callable>true</sandbox_callable>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var TrainingUtils = Class.create();
 TrainingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-    initialize: function() {
-    },
-	validateSchedule: function() {
-		var course = this.getParameter("sysparm_course");
-        var date = this.getParameter("sysparm_date");
-
-		var gr = new GlideRecord('x_1593179_traini_0_schedule');
-		gr.addEncodedQuery("course" + course + "^dateON" + date);
-        gr.setLimit(1);
-        gr.query();
-        
-        if (gr.next()) {
-            return 'true';
-        }
-        return 'false';
-	},
-
 	refQualSchedule: function() {
 		var schedulesNotToShow = [];
 		var grRegister = new GlideRecord("x_1593179_traini_0_register");
@@ -92,14 +75,14 @@ TrainingUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 11:50:17</sys_created_on>
         <sys_id>a40775b2831312101ff9b8a6feaad314</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>TrainingUtils</sys_name>
         <sys_package display_value="Training Register" source="x_1593179_traini_0">8f0282e6831712101ff9b8a6feaad3de</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Training Register">8f0282e6831712101ff9b8a6feaad3de</sys_scope>
         <sys_update_name>sys_script_include_a40775b2831312101ff9b8a6feaad314</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 22:08:39</sys_updated_on>
+        <sys_updated_on>2025-01-30 12:44:33</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>a40775b2831312101ff9b8a6feaad314</id>

@@ -5,7 +5,6 @@
         <element calculation="if(!current.course.nil() &amp;&amp; !current.date.nil()) {&#13;&#10;&#9;current.course.getDisplayValue(&quot;name&quot;).toString() + &quot; - &quot; + current.getValue(&quot;date&quot;).toString();&#13;&#10;}" display="true" label="Title" max_length="250" name="title" type="string" virtual="true"/>
         <element label="Date" max_length="40" name="date" type="glide_date"/>
         <element label="Course" max_length="32" name="course" reference="x_1593179_traini_0_course" type="reference"/>
-        <element calculation="if(!current.total_students.nil()){&#13;&#10;&#9;current.getValue(&quot;total_students&quot;);&#13;&#10;} else {&#13;&#10;&#9;0;&#13;&#10;}" label="Available" max_length="40" name="available" type="integer"/>
         <index name="index">
             <element name="course"/>
         </index>

@@ -2,6 +2,15 @@
     <element db_object_id="923ec666835712101ff9b8a6feaad3b6" label="Course" max_length="40" name="x_1593179_traini_0_course" type="collection">
         <element display="true" label="Name" max_length="250" name="name" type="string"/>
         <element label="Description" max_length="5000" name="description" type="string"/>
+        <element label="Error Message" max_length="1000" name="error_message" type="string"/>
+        <element choice="1" default="1" label="Integration State" max_length="40" name="integration_state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Integration Success" sequence="4" value="3"/>
+                <element inactive_on_update="false" label="Integration Failure" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Waiting" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="Integrating" sequence="2" value="2"/>
+            </choice>
+        </element>
         <element label="Translated Description" max_length="5000" name="translated_description" type="string"/>
     </element>
 </database>

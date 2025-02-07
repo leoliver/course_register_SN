@@ -4,13 +4,13 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 18:52:10</sys_created_on>
-            <sys_id>57ee0aa6835712101ff9b8a6feaad35a</sys_id>
+            <sys_created_on>2025-01-30 17:27:46</sys_created_on>
+            <sys_id>60681d2b835b12101ff9b8a6feaad381</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1593179_traini_0_course" sys_domain="global" view="Default view">3a3ece26835712101ff9b8a6feaad3f1</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 18:52:10</sys_updated_on>
+            <sys_updated_on>2025-01-30 17:27:46</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>description</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 18:52:10</sys_created_on>
-            <sys_id>d3ee0aa6835712101ff9b8a6feaad35b</sys_id>
+            <sys_created_on>2025-01-30 17:27:46</sys_created_on>
+            <sys_id>e4681d2b835b12101ff9b8a6feaad381</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1593179_traini_0_course" sys_domain="global" view="Default view">3a3ece26835712101ff9b8a6feaad3f1</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 18:52:10</sys_updated_on>
+            <sys_updated_on>2025-01-30 17:27:46</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>translated_description</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-01-27 18:52:10</sys_created_on>
-            <sys_id>5bee0aa6835712101ff9b8a6feaad35b</sys_id>
+            <sys_created_on>2025-01-30 17:27:46</sys_created_on>
+            <sys_id>6c681d2b835b12101ff9b8a6feaad381</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1593179_traini_0_course" sys_domain="global" view="Default view">3a3ece26835712101ff9b8a6feaad3f1</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-01-27 18:52:10</sys_updated_on>
+            <sys_updated_on>2025-01-30 17:27:46</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
